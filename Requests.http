@@ -1,0 +1,21 @@
+### Requisição POST
+POST http://localhost:5136/pessoas 
+Content-Type: application/json
+
+{
+    "Nome": "Ana",
+    "CPF": "656565",
+    "Telefone": "9889",
+    "Email": "ana@email.com"
+}
+
+### Requisição PUT
+PUT http://localhost:5136/pessoas/2 
+Content-Type: application/json
+
+{
+    "Nome": "Ana",
+    "CPF": "656565",
+    "Telefone": "9889",
+    "Email": "ana@gmail.com"
+}
