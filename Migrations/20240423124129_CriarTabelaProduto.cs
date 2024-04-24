@@ -3,7 +3,7 @@ using MySql.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace RestauranteApi.Migrations
+namespace ClinicaApi.Migrations
 {
     /// <inheritdoc />
     public partial class CriarTabelaProduto : Migration

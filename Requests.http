@@ -1,5 +1,5 @@
 ### Requisição POST
-POST http://localhost:5136/pessoas 
+POST http://localhost:5136/medicos
 Content-Type: application/json
 
 {
@@ -10,7 +10,7 @@ Content-Type: application/json
 }
 
 ### Requisição PUT
-PUT http://localhost:5136/pessoas/2 
+PUT http://localhost:5136/medicos/2 
 Content-Type: application/json
 
 {

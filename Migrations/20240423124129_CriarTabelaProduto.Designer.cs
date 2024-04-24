@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace RestauranteApi.Migrations
+namespace ClinicaApi.Migrations
 {
     [DbContext(typeof(BancoDeDados))]
     [Migration("20240423124129_CriarTabelaProduto")]

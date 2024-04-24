@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QjnDPt9fr7zR2iHjmbORbGdRng9aetDySpphnVsmXFB/T1+9CDG4jmyO9JCcpMCvatqd1I+g83mLxh77w6zGUQ==",
+  "dgSpecHash": "JYOU7UtwwJzlUVEDStbhj37cxu0dLsxVHcc+FhCxzDCmPvZcoNEvZ+dzWMsN0ddiNmryAi/yv/xr3+Eqq6Ia8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\luang\\Downloads\\api\\RestauranteApi.csproj",
+  "projectFilePath": "C:\\Users\\luang\\Downloads\\api\\ClinicaApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luang\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\luang\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",

@@ -3,7 +3,7 @@ using MySql.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace RestauranteApi.Migrations
+namespace ClinicaApi.Migrations
 {
     /// <inheritdoc />
     public partial class VersaoInicial : Migration
@@ -15,7 +15,7 @@ namespace RestauranteApi.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Pessoas",
+                name: "Medicos",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -27,7 +27,7 @@ namespace RestauranteApi.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Pessoas", x => x.Id);
+                    table.PrimaryKey("PK_Medicos", x => x.Id);
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
         }
@@ -36,7 +36,7 @@ namespace RestauranteApi.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Pessoas");
+                name: "Medicos");
         }
     }
 }

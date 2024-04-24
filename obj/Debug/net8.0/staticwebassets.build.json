@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "LYeuLqlU7p//tsbKtlsTnCefnXE9cR0Zah59X0BzdA8=",
-  "Source": "RestauranteApi",
-  "BasePath": "_content/RestauranteApi",
+  "Hash": "APFpXcLP2ziHBDJ/mUQlSu1/izILU/Dg8GE1cu4elng=",
+  "Source": "ClinicaApi",
+  "BasePath": "_content/ClinicaApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

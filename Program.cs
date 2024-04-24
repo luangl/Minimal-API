@@ -18,10 +18,10 @@ app.UseSwaggerUI();
 
 //  http://localhost:xxxx/swagger/index.html
 
-app.MapGet("/", () => "Restaurante API");
+app.MapGet("/", () => "Clinica API");
 
 //APIs
-app.MapPessoasApi();
+app.MapMedicosApi();
 app.MapProdutosApi();
 
 app.Run();

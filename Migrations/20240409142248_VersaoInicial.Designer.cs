@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace RestauranteApi.Migrations
+namespace ClinicaApi.Migrations
 {
     [DbContext(typeof(BancoDeDados))]
     [Migration("20240409142248_VersaoInicial")]
@@ -20,7 +20,7 @@ namespace RestauranteApi.Migrations
                 .HasAnnotation("ProductVersion", "8.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("Pessoa", b =>
+            modelBuilder.Entity("Medico", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -40,7 +40,7 @@ namespace RestauranteApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Pessoas");
+                    b.ToTable("Medicos");
                 });
 #pragma warning restore 612, 618
         }

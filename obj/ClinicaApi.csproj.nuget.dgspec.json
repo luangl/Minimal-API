@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luang\\Downloads\\api\\RestauranteApi.csproj": {}
+    "C:\\Users\\luang\\Downloads\\api\\ClinicaApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luang\\Downloads\\api\\RestauranteApi.csproj": {
+    "C:\\Users\\luang\\Downloads\\api\\ClinicaApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luang\\Downloads\\api\\RestauranteApi.csproj",
-        "projectName": "RestauranteApi",
-        "projectPath": "C:\\Users\\luang\\Downloads\\api\\RestauranteApi.csproj",
+        "projectUniqueName": "C:\\Users\\luang\\Downloads\\api\\ClinicaApi.csproj",
+        "projectName": "ClinicaApi",
+        "projectPath": "C:\\Users\\luang\\Downloads\\api\\ClinicaApi.csproj",
         "packagesPath": "C:\\Users\\luang\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\luang\\Downloads\\api\\obj\\",
         "projectStyle": "PackageReference",
