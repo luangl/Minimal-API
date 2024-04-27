@@ -22,6 +22,6 @@ app.MapGet("/", () => "Clinica API");
 
 //APIs
 app.MapMedicosApi();
-app.MapProdutosApi();
+app.MapPacientesApi();
 
 app.Run();

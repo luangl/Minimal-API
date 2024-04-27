@@ -12,8 +12,6 @@ public class BancoDeDados : DbContext
 
     //Mapeamento das tabelas
     public DbSet<Medico> Medicos { get; set; }
-    public DbSet<Produto> Produtos { get; set; }
-
     public DbSet<Paciente> Pacientes { get; set; }
 
     //Comandos dotnet

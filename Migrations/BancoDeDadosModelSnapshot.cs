@@ -40,21 +40,27 @@ namespace ClinicaApi.Migrations
                     b.ToTable("Medicos");
                 });
 
-            modelBuilder.Entity("Produto", b =>
+            modelBuilder.Entity("Paciente", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Descricao")
+                    b.Property<string>("CPF")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Email")
                         .HasColumnType("longtext");
 
                     b.Property<string>("Nome")
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Telefone")
+                        .HasColumnType("longtext");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Produtos");
+                    b.ToTable("Pacientes");
                 });
 #pragma warning restore 612, 618
         }
