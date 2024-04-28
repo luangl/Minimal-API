@@ -13,9 +13,8 @@ public class BancoDeDados : DbContext
     //Mapeamento das tabelas
     public DbSet<Medico> Medicos { get; set; }
     public DbSet<Paciente> Pacientes { get; set; }
-
-    
-    public DbSet<Paciente> Consultas { get; set; }
+    public DbSet<Consulta> Consultas { get; set; }
+    public DbSet<Exame> Exames { get; set; }
     //Comandos dotnet
     //dotnet ef migrations add CriarTabelaProduto
     //dotnet ef database update

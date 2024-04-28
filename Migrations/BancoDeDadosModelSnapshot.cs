@@ -62,6 +62,49 @@ namespace ClinicaApi.Migrations
 
                     b.ToTable("Pacientes");
                 });
+
+                modelBuilder.Entity("Consulta", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("CPF")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Telefone")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Consultas");
+                });
+
+                                            modelBuilder.Entity("Exame", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Tipo")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Resultado")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Data")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Exames");
+                });
 #pragma warning restore 612, 618
         }
     }

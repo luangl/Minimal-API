@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 
 public static class ExamesAPI
 {
-    public static void MapExamesAPI(this WebApplication app)
+    public static void MapExamesApi(this WebApplication app)
     {
         var group = app.MapGroup("/exames");
 

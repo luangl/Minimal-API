@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 public static class ConsultasAPI
 {
-    public static void MapConsultasAPI(this WebApplication app)
+    public static void MapConsultasApi(this WebApplication app)
     {
         var group = app.MapGroup("/consultas");
 
@@ -29,9 +29,9 @@ public static class ConsultasAPI
             {
                 return Results.NotFound();
             }
-            consulta.Descricao = consultaAlterada.Nome;
-            consulta.Data = consultaAlterada.Telefone;
-            consulta.Horario = consultaAlterada.Email;
+            consulta.Descricao = consultaAlterada.Descricao;
+            consulta.Data = consultaAlterada.Data;
+            consulta.Horario = consultaAlterada.Horario;
 
             //update....
             await db.SaveChangesAsync();

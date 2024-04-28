@@ -1,6 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 //Configuração Swagger no builder
@@ -23,5 +24,7 @@ app.MapGet("/", () => "Clinica API");
 //APIs
 app.MapMedicosApi();
 app.MapPacientesApi();
+app.MapConsultasApi();
+app.MapExamesApi();
 
 app.Run();
