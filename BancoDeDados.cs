@@ -14,6 +14,8 @@ public class BancoDeDados : DbContext
     public DbSet<Medico> Medicos { get; set; }
     public DbSet<Paciente> Pacientes { get; set; }
 
+    
+    public DbSet<Paciente> Consultas { get; set; }
     //Comandos dotnet
     //dotnet ef migrations add CriarTabelaProduto
     //dotnet ef database update
