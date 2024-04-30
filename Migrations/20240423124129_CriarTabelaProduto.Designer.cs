@@ -20,7 +20,7 @@ namespace ClinicaApi.Migrations
                 .HasAnnotation("ProductVersion", "8.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("Pessoa", b =>
+            modelBuilder.Entity("Medico", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -40,10 +40,10 @@ namespace ClinicaApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Pessoas");
+                    b.ToTable("Medicos");
                 });
 
-            modelBuilder.Entity("Produto", b =>
+            modelBuilder.Entity("Paciente", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -57,7 +57,7 @@ namespace ClinicaApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Produtos");
+                    b.ToTable("Pacientes");
                 });
 #pragma warning restore 612, 618
         }

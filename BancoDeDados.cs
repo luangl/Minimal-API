@@ -16,7 +16,6 @@ public class BancoDeDados : DbContext
     public DbSet<Consulta> Consultas { get; set; }
     public DbSet<Exame> Exames { get; set; }
     //Comandos dotnet
-    //dotnet ef migrations add CriarTabelaProduto
+    //dotnet ef migrations add CriarTabela
     //dotnet ef database update
-
 }
