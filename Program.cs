@@ -1,27 +1,38 @@
-
 using Microsoft.EntityFrameworkCore;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Configuração Swagger no builder
+// Configuração Swagger no builder
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Configuração banco MySQL
+// Configuração banco MySQL
 builder.Services.AddDbContext<BancoDeDados>();
+
+// Configuração de CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
 
 var app = builder.Build();
 
-//Configuração Swagger no app
+// Configuração Swagger no app
 app.UseSwagger();
 app.UseSwaggerUI();
 
-//  http://localhost:xxxx/swagger/index.html
+// Usar o middleware de CORS
+app.UseCors("AllowAllOrigins");
 
 app.MapGet("/", () => "Clinica API");
 
-//APIs
+// APIs
 app.MapMedicosApi();
 app.MapPacientesApi();
 app.MapConsultasApi();

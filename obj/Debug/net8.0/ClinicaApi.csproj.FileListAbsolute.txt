@@ -125,3 +125,6 @@ C:\Users\luang\Downloads\api\obj\Debug\net8.0\refint\ClinicaApi.dll
 C:\Users\luang\Downloads\api\obj\Debug\net8.0\ClinicaApi.pdb
 C:\Users\luang\Downloads\api\obj\Debug\net8.0\ClinicaApi.genruntimeconfig.cache
 C:\Users\luang\Downloads\api\obj\Debug\net8.0\ref\ClinicaApi.dll
+C:\Users\luang\Downloads\api\bin\Debug\net8.0\clinica-app\package-lock.json
+C:\Users\luang\Downloads\api\bin\Debug\net8.0\clinica-app\package.json
+C:\Users\luang\Downloads\api\bin\Debug\net8.0\clinica-app\public\manifest.json
