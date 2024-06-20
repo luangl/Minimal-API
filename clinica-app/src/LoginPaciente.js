@@ -1,33 +1,30 @@
 import React, { useState } from 'react';
-import { apiPacientes } from './api';
 import { Container, TextField, Button, Typography, Box, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { apiPacientes } from './api'; // Importe sua API aqui
 
-const AddPaciente = () => {
-  const [nome, setNome] = useState('');
+const LoginPaciente = () => {
   const [email, setEmail] = useState('');
-  const [telefone, setTelefone] = useState('');
-  const [cpf, setCpf] = useState('');
-  const [senha, setSenha] = useState(''); // Novo estado para a senha
+  const [senha, setSenha] = useState('');
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [severity, setSeverity] = useState('success');
-
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Enviando tanto os dados do paciente quanto a senha
-    apiPacientes.post('/', { nome, email, telefone, cpf, senha })
+    apiPacientes.post('/', { email, senha }) // Supondo que seu endpoint de login seja /login
       .then(response => {
-        console.log('Paciente adicionado', response.data);
-        setMessage('Paciente adicionado com sucesso!');
+        console.log('Login efetuado', response.data);
+        setMessage('Login efetuado com sucesso!');
         setSeverity('success');
         setOpen(true);
+        // Redirecionar para a página após o login
+        navigate('/'); // Substitua '/dashboard' pelo seu caminho de rota após o login
       })
       .catch(error => {
-        console.error('Erro ao adicionar paciente', error);
-        setMessage('Erro ao adicionar paciente. Tente novamente.');
+        console.error('Erro ao fazer login', error);
+        setMessage('Email ou senha incorretos. Tente novamente.');
         setSeverity('error');
         setOpen(true);
       });
@@ -35,41 +32,15 @@ const AddPaciente = () => {
 
   const handleClose = () => {
     setOpen(false);
-    navigate('/');
   };
 
   return (
     <Container maxWidth="sm">
       <Box sx={{ mt: 5 }}>
         <Typography variant="h4" component="h1" gutterBottom>
-          Faça seu cadastro e consulte!
+          Faça seu login
         </Typography>
         <form onSubmit={handleSubmit}>
-          <TextField
-            label="Nome"
-            value={nome}
-            onChange={e => setNome(e.target.value)}
-            fullWidth
-            margin="normal"
-            required
-          />
-          
-          <TextField
-            label="Telefone"
-            value={telefone}
-            onChange={e => setTelefone(e.target.value)}
-            fullWidth
-            margin="normal"
-            required
-          />
-          <TextField
-            label="CPF"
-            value={cpf}
-            onChange={e => setCpf(e.target.value)}
-            fullWidth
-            margin="normal"
-            required
-          />
           <TextField
             label="Email"
             value={email}
@@ -80,7 +51,7 @@ const AddPaciente = () => {
             type="email"
           />
           <TextField
-            label="Senha" // Novo campo para a senha
+            label="Senha"
             value={senha}
             onChange={e => setSenha(e.target.value)}
             fullWidth
@@ -89,7 +60,7 @@ const AddPaciente = () => {
             required
           />
           <Button variant="contained" color="primary" type="submit" fullWidth sx={{ mt: 3 }}>
-            Cadastrar
+            Entrar
           </Button>
         </form>
         <Dialog open={open} onClose={handleClose}>
@@ -110,4 +81,4 @@ const AddPaciente = () => {
   );
 };
 
-export default AddPaciente;
+export default LoginPaciente;

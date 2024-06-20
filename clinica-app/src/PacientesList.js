@@ -1,12 +1,12 @@
 // src/PacientesList.js
 import React, { useEffect, useState } from 'react';
-import api from './api';
+import {apiPacientes} from './api';
 
 const PacientesList = () => {
   const [pacientes, setPacientes] = useState([]);
 
   useEffect(() => {
-    api.get('/')
+    apiPacientes.get('/')
       .then(response => setPacientes(response.data))
       .catch(error => console.error('Erro ao buscar pacientes', error));
   }, []);

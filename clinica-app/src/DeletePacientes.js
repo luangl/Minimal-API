@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import api from './api';
+import { apiPacientes } from './api';
 
 const DeletePaciente = () => {
   const [id, setId] = useState('');
 
   const handleDelete = () => {
-    api.delete(`/${id}`)
+    apiPacientes.delete(`/${id}`)
       .then(response => {
         console.log('Paciente deletado', response.data);
       })
