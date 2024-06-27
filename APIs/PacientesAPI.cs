@@ -36,6 +36,7 @@ public static class PacientesApi {
             paciente.Telefone = pacienteAlterada.Telefone;
             paciente.Email = pacienteAlterada.Email;
             paciente.CPF = pacienteAlterada.CPF;
+            paciente.Senha = pacienteAlterada.Senha;
 
             //update....
             await db.SaveChangesAsync();

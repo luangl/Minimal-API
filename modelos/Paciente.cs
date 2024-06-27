@@ -7,4 +7,5 @@ public class Paciente
     public string? CPF { get; set; }
     public string? Telefone { get; set; }
     public string? Email { get; set; }
+    public string? Senha { get; set; }
 }

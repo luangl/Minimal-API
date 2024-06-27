@@ -1,27 +1,29 @@
 // src/LandingPage.js
 import React from 'react';
-import './LandingPage.css';
+import '../LandingPage.css';
 import { Link } from 'react-router-dom';
 
-const LandingPage = () => {
+const PacientesBotao = () => {
   return (
     <div className="landing-page">
       <header className="header">
         <div className="container">
-          <h1>Bem-vindo à Clínica Hospitalar Moderna</h1>
-          <p>Oferecendo cuidados médicos de qualidade com tecnologia de ponta.</p>
-          <Link to="/paciente">
-            <button className="cta-button">Paciente faça seu cadastro!</button>
+          <h1>Bem-vindo à Clínica Hospitalar Moderna <p className="paciente">Paciente</p></h1>
+          <p>Faça seu cadastro clicando no botão abaixo</p>
+          <Link to="/adicionar">
+            <button className="cta-button">Faça seu cadastro!</button>
           </Link>
-          <Link to="/consultas">
-            <button className="cta-button">Agende uma Consulta!</button>
+          <div>
+          <Link to="/listar">
+            <button className="cta-button">Lista de Pacientes Cadastrados</button>
           </Link>
-          <Link to="/exames">
-            <button className="cta-button">Agende um exame! </button>
+          <Link to="/editarpaciente">
+            <button className="cta-button">Editar Pacientes</button>
           </Link>
-          <Link to="/medicos">
-            <button className="cta-button">Sou médico</button>
+          <Link to="/deletar">
+            <button className="cta-button">Excluir Pacientes</button>
           </Link>
+          </div>
         </div>
       </header>
       <main className="content">
@@ -51,4 +53,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default PacientesBotao;

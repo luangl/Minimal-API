@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { apiPacientes } from './api';
+import { apiPacientes } from '../api';
 import { Container, TextField, Button, Typography, Box, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,7 +17,6 @@ const AddPaciente = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Enviando tanto os dados do paciente quanto a senha
     apiPacientes.post('/', { nome, email, telefone, cpf, senha })
       .then(response => {
         console.log('Paciente adicionado', response.data);

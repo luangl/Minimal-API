@@ -58,6 +58,9 @@ namespace ClinicaApi.Migrations
                     b.Property<string>("Telefone")
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Senha")
+                        .HasColumnType("longtext");
+
                     b.HasKey("Id");
 
                     b.ToTable("Pacientes");
