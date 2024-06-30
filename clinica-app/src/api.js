@@ -15,5 +15,9 @@ const apiConsultas = axios.create({
   baseURL: 'http://localhost:5136/consultas',
 });
 
+const apiExames = axios.create({
+  baseURL: 'http://localhost:5136/exames',
+});
+
 // Exporta as instâncias para uso em outras partes do aplicativo
-export { apiPacientes, apiMedicos, apiConsultas };
+export { apiPacientes, apiMedicos, apiConsultas, apiExames };
